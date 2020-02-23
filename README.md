@@ -33,3 +33,64 @@ Within the Success banner, make note of how to login with this IAM user. It'll b
 After creating your AWS root account, then creating and logging in with your IAM user with AdministratorAccess privileges, create the database that'll hold all the bills info.
 
 > From the AWS Management Console Navigate to RDS. Choose Databases from the side panel.
+
+* Click Create database
+* Method: Standard Create
+* Engine: PostgreSQL (version: whatver is the default)
+* Templates: Free tier
+* Db instance identifier: company-bills
+* Master username: postgres
+* Auto generate a password
+* Connectivity: Create new VPC
+* Database authentication: Password and IAM database authentication
+* Defaults for everything else
+    * In a followup step, you will need to connect to this database. The directions call for creating an EC2 instance to connect to it, but if you prefer, you can temporarily make this database have a publicly available IP and connect to it directly from your local machine if you have or don't mind having the psql commandline installed.
+* Click Create database
+
+On the next page, before navigating away click "View credential details" in the upper right corner to retreive the auto-generated password.
+
+DB Creation takes a solid 8 minutes or so. Before it's finished creating, you may get a warning about certificate updates. Ignore this. It will go away.
+
+## Install the PostgreSQL tools for your operating system.
+
+[Download](https://www.postgresql.org/download/) the appropriate installation files and install.
+
+```javascript
+const AWS = require('aws-sdk');
+const { Client } = require('pg');
+
+exports.handler = (event, context, callback) => {
+  const signer = new AWS.RDS.Signer();
+  signer.getAuthToken({ // uses the IAM role access keys to create an authentication token
+    region: 'us-east-1',
+    hostname: 'database-1.cei7zhcxm5mm.us-east-1.rds.amazonaws.com',
+    port: 5432,
+    username: 'db_userx'}, (err, token) => {
+    if (err) {
+      console.log(`could not get auth token: ${err}`);
+      callback(err);
+    } else {
+      console.log(token);
+      const client = new Client({
+        host: 'database-1.cei7zhcxm5mm.us-east-1.rds.amazonaws.com',
+        port: 5432,
+        user: 'db_userx',
+        database: 'postgres',
+        password: token,
+        ssl: 'Amazon RDS'
+      });
+      client.connect(err => {
+        if (err) {
+          callback(err);
+        } else {
+          //client.query('SELECT * FROM test2').then(res => callback(null, JSON.stringify(res.rows))).catch(err => callback(err)).finally(() => client.end());
+          client.query('INSERT INTO test2 (name) VALUES (\'Rune\')').then(res => callback(null, JSON.stringify(res.rows))).catch((err, sql) => {
+            console.log(sql);
+            callback(err);
+          }).finally(() => client.end());
+        }
+      });
+    }
+  });
+};
+```
