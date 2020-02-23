@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__mifflin__ | Reports</title>
+    <link rel="icon" 
+      type="image/ico" 
+      href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="invoices.css" />
+    <script src="vendors.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+        <a class="nav-brand" href="/">
+              __mifflin__
+        </a>
+        <div class="nav">
+            <a class="nav-link" href="/help.html">Help</a>
+            <div class="dropdown">
+                <div class="dropbtn separator">Scranton &#x25BC;</div>
+                <div class="dropdown-content">
+                    <a class="separator" href="vendors.html">Vendors</a></li>
+                    <a href="#">Stamford</a></li>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">Michael Scott &#x25BC;</div>
+                <div class="dropdown-content">
+                    <a class="nav-special" href='#'>Account Settings</a></li>
+                    <a href='login.html'>Logout</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+  </nav>
+  <main>
+      <template id="new-vendor-row">
+        <tr>
+            <td><button class="delete-btn">-</button></td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+            <td>
+                <select>
+                    <option>Sole prop/single-member LLC</option>
+                    <option>C Corporation</option>
+                    <option>S Corporation</option>
+                    <option>Partnership</option>
+                    <option>Trust/estate</option>
+                    <option>LLC (C Corporation)</option>
+                    <option>LLC (S Corporation)</option>
+                    <option>LLC (Partnership)</option>
+                <select>
+            </td>
+            <td><input type="text" name="" id=""></td>
+            <td><select></select></td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+            <td></td>
+        </tr>
+      </template>
+      <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th><button id="add-vendor">+</button></th>
+                    <th>Name* <span title="as shown on income tax return">&#x24D8;</span></th>
+                    <th>Business Name <span title="Business name/disregarded entity name, if different from above">&#x24D8;</span></th>
+                    <th>Tax classification</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>TIN</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+      </div>
+    </main>
+</body>
+</html>

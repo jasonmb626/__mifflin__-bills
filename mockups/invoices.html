@@ -8,8 +8,8 @@
       type="image/ico" 
       href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="reports.css" />
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="invoices.css" />
+    <script src="invoices.js" defer></script>
 </head>
 <body>
   <nav>
@@ -22,7 +22,7 @@
             <div class="dropdown">
                 <div class="dropbtn separator">Scranton &#x25BC;</div>
                 <div class="dropdown-content">
-                    <a class="separator" href="createreport.html">Create Report</a></li>
+                    <a class="separator" href="createreport.html">Invoices</a></li>
                     <a href="#">Stamford</a></li>
                 </div>
             </div>
@@ -37,10 +37,23 @@
     </div>
   </nav>
   <main>
+      <template id="new-invoice-row">
+        <tr>
+            <td><button class="delete-btn">-</button></td>
+            <td><select id="vendors"></select></td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="date" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+            <td><select id="account-codes"></td>
+            <td><input type="text" name="" id=""></td>
+            <td><select id="pos"></select></td>
+        </tr>
+      </template>
       <div class="container">
         <table>
             <thead>
                 <tr>
+                    <th><button id="add-invoice">+</button></th>
                     <th>Vendor</th>
                     <th>Invoice #</th>
                     <th>Invoice Date</th>
@@ -50,8 +63,9 @@
                     <th>Purchase Order #</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table-body">
                 <tr>
+                    <td></td>
                     <td>Andy's Office Supplies</td>
                     <td>C786458</td>
                     <td>2/15/2020</td>
