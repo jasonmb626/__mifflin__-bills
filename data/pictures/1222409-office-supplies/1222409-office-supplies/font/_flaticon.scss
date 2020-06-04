@@ -1,0 +1,111 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 25/10/2018 10:42
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-001-bin:before { content: "\f100"; }
+.flaticon-002-graphic:before { content: "\f101"; }
+.flaticon-003-book:before { content: "\f102"; }
+.flaticon-004-book-1:before { content: "\f103"; }
+.flaticon-005-book-2:before { content: "\f104"; }
+.flaticon-006-calculator:before { content: "\f105"; }
+.flaticon-007-calendar:before { content: "\f106"; }
+.flaticon-008-desk-chair:before { content: "\f107"; }
+.flaticon-009-clipboard:before { content: "\f108"; }
+.flaticon-010-coffee-cup:before { content: "\f109"; }
+.flaticon-011-computer:before { content: "\f10a"; }
+.flaticon-012-desktop:before { content: "\f10b"; }
+.flaticon-013-lamp:before { content: "\f10c"; }
+.flaticon-014-document:before { content: "\f10d"; }
+.flaticon-015-identification-card:before { content: "\f10e"; }
+.flaticon-016-envelope:before { content: "\f10f"; }
+.flaticon-017-file-cabinet:before { content: "\f110"; }
+.flaticon-018-file:before { content: "\f111"; }
+.flaticon-019-folders:before { content: "\f112"; }
+.flaticon-020-stamp:before { content: "\f113"; }
+.flaticon-021-glue:before { content: "\f114"; }
+.flaticon-022-highlighter:before { content: "\f115"; }
+.flaticon-023-notebook:before { content: "\f116"; }
+.flaticon-024-laptop:before { content: "\f117"; }
+.flaticon-025-tape:before { content: "\f118"; }
+.flaticon-026-clip:before { content: "\f119"; }
+.flaticon-027-document-1:before { content: "\f11a"; }
+.flaticon-028-pen:before { content: "\f11b"; }
+.flaticon-029-telephone:before { content: "\f11c"; }
+.flaticon-030-push-pin:before { content: "\f11d"; }
+.flaticon-031-printer:before { content: "\f11e"; }
+.flaticon-032-scissors:before { content: "\f11f"; }
+.flaticon-033-projector:before { content: "\f120"; }
+.flaticon-034-stapler:before { content: "\f121"; }
+.flaticon-035-stapler-1:before { content: "\f122"; }
+.flaticon-036-briefcase:before { content: "\f123"; }
+    
+    $font-Flaticon-001-bin: "\f100";
+    $font-Flaticon-002-graphic: "\f101";
+    $font-Flaticon-003-book: "\f102";
+    $font-Flaticon-004-book-1: "\f103";
+    $font-Flaticon-005-book-2: "\f104";
+    $font-Flaticon-006-calculator: "\f105";
+    $font-Flaticon-007-calendar: "\f106";
+    $font-Flaticon-008-desk-chair: "\f107";
+    $font-Flaticon-009-clipboard: "\f108";
+    $font-Flaticon-010-coffee-cup: "\f109";
+    $font-Flaticon-011-computer: "\f10a";
+    $font-Flaticon-012-desktop: "\f10b";
+    $font-Flaticon-013-lamp: "\f10c";
+    $font-Flaticon-014-document: "\f10d";
+    $font-Flaticon-015-identification-card: "\f10e";
+    $font-Flaticon-016-envelope: "\f10f";
+    $font-Flaticon-017-file-cabinet: "\f110";
+    $font-Flaticon-018-file: "\f111";
+    $font-Flaticon-019-folders: "\f112";
+    $font-Flaticon-020-stamp: "\f113";
+    $font-Flaticon-021-glue: "\f114";
+    $font-Flaticon-022-highlighter: "\f115";
+    $font-Flaticon-023-notebook: "\f116";
+    $font-Flaticon-024-laptop: "\f117";
+    $font-Flaticon-025-tape: "\f118";
+    $font-Flaticon-026-clip: "\f119";
+    $font-Flaticon-027-document-1: "\f11a";
+    $font-Flaticon-028-pen: "\f11b";
+    $font-Flaticon-029-telephone: "\f11c";
+    $font-Flaticon-030-push-pin: "\f11d";
+    $font-Flaticon-031-printer: "\f11e";
+    $font-Flaticon-032-scissors: "\f11f";
+    $font-Flaticon-033-projector: "\f120";
+    $font-Flaticon-034-stapler: "\f121";
+    $font-Flaticon-035-stapler-1: "\f122";
+    $font-Flaticon-036-briefcase: "\f123";
